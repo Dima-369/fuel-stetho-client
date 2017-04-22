@@ -47,8 +47,8 @@ class FuelStethoClient(val proxy: Proxy? = null) : Client {
                     connection.errorStream
                 } else {
                     try {
-                        val a = connection.inputStream
-                        stetho.interpretResponseStream(a)
+                        val from = connection.inputStream
+                        stetho.interpretResponseStream(from)
                     } catch(exception: IOException) {
                         null
                     }
