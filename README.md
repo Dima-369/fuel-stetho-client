@@ -1,6 +1,6 @@
-### Integrate [Stetho](http://facebook.github.io/stetho/) into [Fuel](https://github.com/kittinunf/Fuel)
+### Integrates [Stetho](http://facebook.github.io/stetho/) into [Fuel](https://github.com/kittinunf/Fuel)
 
-Set the client, preferably in `Application.onCreate()`:
+Set the client instance, preferably in `Application.onCreate()`:
 
 ```kotlin
 if (BuildConfig.DEBUG) {
@@ -16,3 +16,7 @@ dependencies {
 	compile 'com.facebook.stetho:stetho-urlconnection:1.4.2'
 }
 ```
+
+## Notes
+
+* The call to `StethoURLConnectionManager.httpExchangeFailed()` is missing.
